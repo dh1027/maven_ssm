@@ -57,18 +57,21 @@ public class UserController {
     }
 
     @RequestMapping("/loginContrller")
-    @ResponseBody
-    public String loginContrller(String username, String password) {
+    public String loginContrller(String username, String password, Model model) {
         User user = userService.getUserByName(username);
+        String message = null;
         if (user != null) {
             if (user.getPassword().equals(password)) {
-                return "成功";
+                model.addAttribute("name", username);
+                return "index";
             } else {
-                return "密码错误";
+                message = "密码错误";
             }
         } else {
-            return "该用户还未注册";
+            message = "该用户还未注册";
         }
+        model.addAttribute("message", message);
+        return "error";
 
     }
 }

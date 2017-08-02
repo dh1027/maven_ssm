@@ -51,19 +51,36 @@ a:hover {
     color: #b3b3b3;
 }
 
-.side_pic {
-    padding: 30px 15px 15px 30px;
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(160, 188, 173, 0.5);
 }
-.side_pic .side_content{
+
+.header h1 {
+    padding: 0;
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 8px;
+}
+
+.side_pic {
+    margin-top: 20px;
+    padding: 15px 0px 0px 0px;
+}
+
+.side_pic .side_content {
     padding: 30px;
 }
-.side_pic .carousel-inner{
-    height: 300px;
+
+.side_pic .carousel-inner {
+    height: auto;
 }
-.side_pic .side_content .item img{
+
+.side_pic .side_content .item img {
     vertical-align: middle;
-    pa
-    height: 250px;
+    height: 100%;
+    width: 100%;
 }
 
 .fh5co-form {
