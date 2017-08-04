@@ -63,6 +63,8 @@ public class UserController {
         if (user != null) {
             if (user.getPassword().equals(password)) {
                 model.addAttribute("name", username);
+                List<User> list = userService.getAllUser();
+                model.addAttribute("list", list);
                 return "index";
             } else {
                 message = "密码错误";

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: BKJCB
@@ -12,6 +13,18 @@
 </head>
 <body>
 <H2>Hellow ${name}</H2>
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <td>密码</td>
+    </tr>
+    <c:forEach var="student" items="${list}">
+        <tr>
+            <td>${student.name}</td>
+            <td>${student.password}</td>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 <!-- jQuery -->
 <script src="../../js/jquery.min.js"></script>
