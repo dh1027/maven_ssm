@@ -23,6 +23,9 @@
     <import resource="spring-db.xml"/>    
         
     <!-- 导入事务配置 -->    
-    <import resource="spring-tx.xml"/>    
+    <import resource="spring-tx.xml"/>
+
+    <!--redis-spring配置-->
+    <import resource="spring-redis.xml"/>
         
 </beans>   
